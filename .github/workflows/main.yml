@@ -16,8 +16,11 @@ jobs:
           - package-manager: yarn
             vault_cli_version: 0.45.0
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.0.5
+        uses: LedgerHQ/install-vault-cli-action@v1.0.6
         with:
           package-manager: ${{ matrix.package-manager }}
           version: ${{ matrix.vault_cli_version }}
