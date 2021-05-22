@@ -19,6 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Set up Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
       - name: Install Vault-CLI
         uses: LedgerHQ/install-vault-cli-action@v1.0.6
         with:
