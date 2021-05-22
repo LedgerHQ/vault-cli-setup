@@ -1,0 +1,17 @@
+name: "Install Vault CLI action"
+description: "Downloads and install Vault CLI action locally"
+
+inputs:
+  package-manager:
+    description: 'Package manager for installation ["yarn", "npm"]'
+    required: false
+    default: npm
+  version:
+    description: "The Vault CLI version to install"
+    required: false
+    default: latest
+
+runs:
+  using: "node12"
+  main: "setup.js"
+  post: "cleanup.js"

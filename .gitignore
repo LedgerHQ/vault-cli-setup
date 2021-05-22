@@ -1,6 +1,7 @@
 /.dev
 node_modules/
 lib
+package-lock.json
 
 # Jetbrains
 /.idea

@@ -1,0 +1,27 @@
+name: Test Install Vault CLI Action
+
+on:
+  push:
+
+jobs:
+  test-action:
+    name: Test Install Vault CLI Action
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package-manager: npm
+            vault_cli_version: 0.47.0
+          - package-manager: yarn
+            vault_cli_version: 0.47.0
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Vault-CLI
+        uses: LedgerHQ/install-vault-cli-action@v1.0.0
+        with:
+          package-manager: ${{ matrix.package-manager }}
+          version: ${{ matrix.vault_cli_version }}
