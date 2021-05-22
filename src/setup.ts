@@ -11,7 +11,7 @@ async function run() {
     switch (PACKAGE_MANAGER) {
       case "npm":
         await exec.exec(
-          `sudo npm install -g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`
+          `sudo npm install --unsafe-perm -g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`
         );
         break;
       case "yarn":

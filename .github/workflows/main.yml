@@ -25,7 +25,7 @@ jobs:
           node-version: 14
 
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.0.8
+        uses: LedgerHQ/install-vault-cli-action@v1.0.9
         with:
           package-manager: ${{ matrix.package-manager }}
           version: ${{ matrix.vault_cli_version }}
