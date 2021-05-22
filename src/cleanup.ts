@@ -1,5 +1,5 @@
-const { execSync } = require("child_process");
-const core = require("@actions/core");
+import { execSync } from "child_process";
+import * as core from "@actions/core";
 
 console.log(`REMOVE LEDGER VAULT CLI`);
 

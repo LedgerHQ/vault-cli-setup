@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.0.2
+        uses: LedgerHQ/install-vault-cli-action@v1.0.3
         with:
           package-manager: ${{ matrix.package-manager }}
           version: ${{ matrix.vault_cli_version }}
