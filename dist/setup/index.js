@@ -547,7 +547,7 @@ async function run() {
     try {
         switch (PACKAGE_MANAGER) {
             case "npm":
-                (0,external_child_process_namespaceObject.execSync)(`sudo npm install --g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`, { stdio: "inherit" });
+                (0,external_child_process_namespaceObject.execSync)(`sudo npm install -g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`, { stdio: "inherit" });
                 break;
             case "yarn":
                 (0,external_child_process_namespaceObject.execSync)(`sudo yarn global add @ledgerhq/vault-cli@${VAULT_CLI_VERSION}`, { stdio: "inherit" });
