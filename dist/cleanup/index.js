@@ -545,10 +545,14 @@ const PACKAGE_MANAGER = core.getInput("package-manager");
 async function run() {
     switch (PACKAGE_MANAGER) {
         case "npm":
-            (0,external_child_process_namespaceObject.execSync)(`sudo npm uninstall -g @ledgerhq/vault-cli`, { stdio: "inherit" });
+            (0,external_child_process_namespaceObject.execSync)(`sudo npm uninstall -g @ledgerhq/vault-cli`, {
+                stdio: "inherit",
+            });
             break;
         case "yarn":
-            (0,external_child_process_namespaceObject.execSync)(`sudo yarn global remove @ledgerhq/vault-cli`, { stdio: "inherit" });
+            (0,external_child_process_namespaceObject.execSync)(`sudo yarn global remove @ledgerhq/vault-cli`, {
+                stdio: "inherit",
+            });
             break;
         default:
             throw new Error(`Sorry, we are out of ${PACKAGE_MANAGER}.`);

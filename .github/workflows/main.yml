@@ -17,7 +17,7 @@ jobs:
             vault_cli_version: 0.45.0
     steps:
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.0.4
+        uses: LedgerHQ/install-vault-cli-action@v1.0.5
         with:
           package-manager: ${{ matrix.package-manager }}
           version: ${{ matrix.vault_cli_version }}

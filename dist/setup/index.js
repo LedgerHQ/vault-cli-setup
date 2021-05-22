@@ -544,15 +544,18 @@ console.log(`INSTALLING LEDGER VAULT CLI`);
 const PACKAGE_MANAGER = core.getInput("package-manager");
 const VAULT_CLI_VERSION = core.getInput("version");
 async function run() {
-    switch (PACKAGE_MANAGER) {
-        case "npm":
-            (0,external_child_process_namespaceObject.execSync)(`sudo npm install --g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`, { stdio: "inherit" });
-            break;
-        case "yarn":
-            (0,external_child_process_namespaceObject.execSync)(`sudo yarn global add @ledgerhq/vault-cli@${VAULT_CLI_VERSION}`, { stdio: "inherit" });
-            break;
-        default:
-            throw new Error(`Sorry, we are out of ${PACKAGE_MANAGER}.`);
+    try {
+        switch (PACKAGE_MANAGER) {
+            case "npm":
+                (0,external_child_process_namespaceObject.execSync)(`sudo npm install --g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`, { stdio: "inherit" });
+                break;
+            case "yarn":
+                (0,external_child_process_namespaceObject.execSync)(`sudo yarn global add @ledgerhq/vault-cli@${VAULT_CLI_VERSION}`, { stdio: "inherit" });
+                break;
+        }
+    }
+    catch (err) {
+        core.setFailed(err.message);
     }
 }
 run();
