@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 14
 
+      - run: npm install -g @ledgerhq/vault-cli@${{ matrix.vault_cli_version }} --loglevel=error
+
       - name: Install Vault-CLI
         uses: LedgerHQ/install-vault-cli-action@v1.0.7
         with:
