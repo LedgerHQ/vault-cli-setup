@@ -8,12 +8,12 @@ const PACKAGE_MANAGER = core.getInput("package-manager");
 async function run() {
   switch (PACKAGE_MANAGER) {
     case "npm":
-      execSync(`sudo npm uninstall -g @ledgerhq/vault-cli`, {
+      execSync(`npm uninstall -g @ledgerhq/vault-cli`, {
         stdio: "inherit",
       });
       break;
     case "yarn":
-      execSync(`sudo yarn global remove @ledgerhq/vault-cli`, {
+      execSync(`yarn global remove @ledgerhq/vault-cli`, {
         stdio: "inherit",
       });
       break;
