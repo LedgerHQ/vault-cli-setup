@@ -19,7 +19,7 @@ jobs:
             with_sudo: true
     steps:
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.2.0
+        uses: LedgerHQ/install-vault-cli-action@v1.3.0
         with:
           package_manager: ${{ matrix.package_manager }}
           vault_cli_version: ${{ matrix.vault_cli_version }}
