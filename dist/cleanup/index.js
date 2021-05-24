@@ -2111,7 +2111,7 @@
 
     const PACKAGE_MANAGER =
       _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput("package_manager");
-    const SUDO = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput(
+    const SUDO = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getBooleanInput(
       "with_sudo"
     )
       ? "sudo"
