@@ -2,7 +2,7 @@ import { exec } from "@actions/exec";
 import * as core from "@actions/core";
 
 const PACKAGE_MANAGER = core.getInput("package_manager");
-const SUDO = core.getInput("with_sudo") ? "sudo" : "";
+const SUDO = core.getBooleanInput("with_sudo") ? "sudo" : "";
 
 async function run() {
   console.log(`REMOVE LEDGER VAULT CLI`);
