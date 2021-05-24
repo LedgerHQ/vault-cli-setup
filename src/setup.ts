@@ -1,8 +1,9 @@
 import * as core from "@actions/core";
-import { execSync } from "child_process";
+import { exec } from "@actions/exec";
 
-const PACKAGE_MANAGER = core.getInput("package-manager");
-const VAULT_CLI_VERSION = core.getInput("version");
+const PACKAGE_MANAGER = core.getInput("package_manager");
+const VAULT_CLI_VERSION = core.getInput("vault_cli_version");
+const SUDO = core.getInput("with_sudo") ? "sudo" : "";
 
 async function run() {
   console.log(`INSTALLING LEDGER VAULT CLI`);
@@ -10,13 +11,13 @@ async function run() {
   try {
     switch (PACKAGE_MANAGER) {
       case "npm":
-        await execSync(
-          `npm install --unsafe-perm -g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`
+        await exec(
+          `${SUDO} npm install --unsafe-perm -g @ledgerhq/vault-cli@${VAULT_CLI_VERSION} --loglevel=error`
         );
         break;
       case "yarn":
-        await execSync(
-          `yarn global add @ledgerhq/vault-cli@${VAULT_CLI_VERSION}`
+        await exec(
+          `${SUDO} yarn global add @ledgerhq/vault-cli@${VAULT_CLI_VERSION}`
         );
         break;
     }

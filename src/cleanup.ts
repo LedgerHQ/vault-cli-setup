@@ -1,24 +1,23 @@
-import { execSync } from "child_process";
+import { exec } from "@actions/exec";
 import * as core from "@actions/core";
 
-console.log(`REMOVE LEDGER VAULT CLI`);
-
-const PACKAGE_MANAGER = core.getInput("package-manager");
+const PACKAGE_MANAGER = core.getInput("package_manager");
+const SUDO = core.getInput("with_sudo") ? "sudo" : "";
 
 async function run() {
-  switch (PACKAGE_MANAGER) {
-    case "npm":
-      execSync(`npm uninstall -g @ledgerhq/vault-cli`, {
-        stdio: "inherit",
-      });
-      break;
-    case "yarn":
-      execSync(`yarn global remove @ledgerhq/vault-cli`, {
-        stdio: "inherit",
-      });
-      break;
-    default:
-      throw new Error(`Sorry, we are out of ${PACKAGE_MANAGER}.`);
+  console.log(`REMOVE LEDGER VAULT CLI`);
+
+  try {
+    switch (PACKAGE_MANAGER) {
+      case "npm":
+        await exec(`${SUDO} npm uninstall -g @ledgerhq/vault-cli`);
+        break;
+      case "yarn":
+        await exec(`${SUDO} yarn global remove @ledgerhq/vault-cli`);
+        break;
+    }
+  } catch (err) {
+    core.setFailed(err.message);
   }
 }
 

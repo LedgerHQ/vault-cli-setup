@@ -11,17 +11,18 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - package-manager: npm
+          - package_manager: npm
             vault_cli_version: 0.47.0
-          - package-manager: yarn
+            with_sudo: true
+          - package_manager: yarn
             vault_cli_version: 0.45.0
+            with_sudo: true
     steps:
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.1.0
+        uses: LedgerHQ/install-vault-cli-action@v1.2.0
         with:
           package-manager: ${{ matrix.package-manager }}
           version: ${{ matrix.vault_cli_version }}
 
       - name: Check Version
         run: ledger-vault -v
-
