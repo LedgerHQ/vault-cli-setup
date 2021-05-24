@@ -3,7 +3,7 @@ import { exec } from "@actions/exec";
 
 const PACKAGE_MANAGER = core.getInput("package_manager");
 const VAULT_CLI_VERSION = core.getInput("vault_cli_version");
-const SUDO = core.getInput("with_sudo") ? "sudo" : "";
+const SUDO = core.getBooleanInput("with_sudo") ? "sudo" : "";
 
 async function run() {
   console.log(`INSTALLING LEDGER VAULT CLI`);
