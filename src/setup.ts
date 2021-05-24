@@ -25,7 +25,6 @@ async function run() {
     core.setFailed(err.message);
   }
 
-  console.log(`LEDGER VAULT CLI INSTALLED SUCCESSFULLY`);
 }
 
 run();
