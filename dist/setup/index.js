@@ -2113,7 +2113,7 @@
       _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("package_manager");
     const VAULT_CLI_VERSION =
       _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("vault_cli_version");
-    const SUDO = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput(
+    const SUDO = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getBooleanInput(
       "with_sudo"
     )
       ? "sudo"
