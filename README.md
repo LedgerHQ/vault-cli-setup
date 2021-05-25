@@ -47,5 +47,4 @@ steps:
      uses: LedgerHQ/install-vault-cli-action@v1.5.0
      with:
         package_manager: yarn #optional
-        vault_cli_version: 0.48.0 #optional
 ```
