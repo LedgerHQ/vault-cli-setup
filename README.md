@@ -6,7 +6,7 @@ This action provides the following functionality for GitHub Actions runners:
 - Downloading and setting up a requested version of Vault-CLI
 
 ## Usage
-Inputs `vault_cli_version`, `package_manager` and `with_sudo` are mandatory. 
+Inputs `vault_cli_version`, `package_manager` and `with_sudo` are optional. 
 See list of available options:
 ```yaml
   package_manager:
