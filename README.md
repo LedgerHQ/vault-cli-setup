@@ -24,6 +24,11 @@ See list of available options:
 ```
 
 ### Basic examples
+```yaml
+steps:
+   - name: Install Vault-CLI
+     uses: LedgerHQ/install-vault-cli-action@v1.5.0
+```
 **Install with NPM**
 ```yaml
 steps:
