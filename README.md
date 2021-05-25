@@ -47,4 +47,5 @@ steps:
      uses: LedgerHQ/install-vault-cli-action@v1.5.0
      with:
         package_manager: yarn #optional
+        with_sudo: true #optional
 ```
