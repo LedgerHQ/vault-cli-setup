@@ -4,7 +4,7 @@
 
 This action provides the following functionality for GitHub Actions runners:
 
-- Downloading and setting up a requested version of ***[Vault-CLI](https://www.npmjs.com/package/@ledgerhq/vault-cli)***
+- Downloading and setting up a requested version of **_[Vault-CLI](https://www.npmjs.com/package/@ledgerhq/vault-cli)_**
 
 ## Usage
 
@@ -33,7 +33,7 @@ with_sudo:
 ```yaml
 steps:
   - name: Install Vault-CLI
-    uses: LedgerHQ/vault-cli-setup@v2
+    uses: LedgerHQ/vault-cli-setup@v3
     with:
       package_manager: npm #optional
       vault_cli_version: 0.48.0 #optional
@@ -45,7 +45,7 @@ steps:
 ```yaml
 steps:
   - name: Install Vault-CLI
-    uses: LedgerHQ/vault-cli-setup@v2
+    uses: LedgerHQ/vault-cli-setup@v3
     with:
       vault_cli_version: 0.48.0 #optional
 ```
