@@ -7,6 +7,7 @@ jobs:
   test-action:
     name: Test Install Vault CLI Action
     runs-on: ubuntu-20.04
+
     strategy:
       fail-fast: false
       matrix:
@@ -19,7 +20,7 @@ jobs:
             with_sudo: true
     steps:
       - name: Install Vault-CLI
-        uses: LedgerHQ/install-vault-cli-action@v1.5.0
+        uses: LedgerHQ/vault-cli-setup@v2
         with:
           package_manager: ${{ matrix.package_manager }}
           vault_cli_version: ${{ matrix.vault_cli_version }}

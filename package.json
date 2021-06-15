@@ -1,23 +1,23 @@
 {
-  "name": "install-vault-cli-action",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "ncc build src/setup.ts -o dist/setup && ncc build src/cleanup.ts -o dist/cleanup",
-    "format": "prettier --write ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LedgerHQ/install-vault-cli-action"
-  },
-  "author": "isandratskyi-ledger",
-  "homepage": "https://github.com/LedgerHQ/install-vault-cli-action#readme",
-  "dependencies": {
-    "@vercel/ncc": "^0.28.5",
-    "@types/node": "^15.6.0",
-    "@actions/core": "^1.3.0",
-    "@actions/exec": "^1.0.4",
-    "prettier": "^2.3.0",
-    "typescript": "^4.2.4"
-  }
+	"name": "vault-cli-setup",
+	"version": "2.0.0",
+	"description": "",
+	"scripts": {
+		"build": "ncc build src/setup.ts -o dist/setup && ncc build src/cleanup.ts -o dist/cleanup",
+		"format": "prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LedgerHQ/vault-cli-setup"
+	},
+	"author": "isandratskyi-ledger",
+	"homepage": "https://github.com/LedgerHQ/vault-cli-setup#readme",
+	"dependencies": {
+		"@vercel/ncc": "^0.28.5",
+		"@types/node": "^15.6.0",
+		"@actions/core": "^1.3.0",
+		"@actions/exec": "^1.0.4",
+		"prettier": "^2.3.0",
+		"typescript": "^4.2.4"
+	}
 }
