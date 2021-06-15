@@ -13,7 +13,7 @@ inputs:
   with_sudo:
     description: 'Install Vault CLI with sudo'
     required: false
-    default: 'false'
+    default: 'true'
 
 runs:
   using: 'node12'
