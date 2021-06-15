@@ -1,10 +1,10 @@
 # install-vault-cli-action
 
-[![Test Install Vault CLI Action](https://github.com/LedgerHQ/install-vault-cli-action/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/LedgerHQ/install-vault-cli-action/actions/workflows/main.yml)
+[![Test Install Vault CLI Action](https://github.com/LedgerHQ/vault-cli-setup/actions/workflows/main.yml/badge.svg)](https://github.com/LedgerHQ/vault-cli-setup/actions/workflows/main.yml)
 
 This action provides the following functionality for GitHub Actions runners:
 
-- Downloading and setting up a requested version of Vault-CLI
+- Downloading and setting up a requested version of ***[Vault-CLI](https://www.npmjs.com/package/@ledgerhq/vault-cli)***
 
 ## Usage
 
