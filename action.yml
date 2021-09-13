@@ -16,6 +16,6 @@ inputs:
     default: 'true'
 
 runs:
-  using: 'node12'
+  using: 'node14'
   main: 'dist/setup/index.js'
   post: 'dist/cleanup/index.js'
